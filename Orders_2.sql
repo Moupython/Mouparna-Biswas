@@ -1,5 +1,5 @@
 use restaurant ; 
-
+---------- What is the date range of the table -----------------
 with t1 as (select max(order_date)  as Highest_Date, min (Order_date) as Minimum_date  
 from 
 dbo.order_details)
@@ -24,4 +24,5 @@ select order_id
 from Restaurant.dbo.order_details
 group by order_id 
 having count(Item_id) > 12; 
+
 
